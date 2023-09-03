@@ -33,6 +33,7 @@ int game(int maxnum) {
         }
         else {
             cout << "You guessed it, the number was " << target_number << endl;
+            guesses++;
             break;
         }
     }
