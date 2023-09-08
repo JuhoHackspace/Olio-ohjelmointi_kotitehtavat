@@ -12,6 +12,6 @@ void Asunto::maarita(int as, int n)
 }
 double Asunto::laskeKulutus(double hinta)
 {
-    double kulutus = hinta * this->asukasMaara * this->neliot;
+    double kulutus = (double) (hinta * this->asukasMaara * this->neliot);
     return kulutus;
 }
