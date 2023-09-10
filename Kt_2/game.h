@@ -1,6 +1,10 @@
 #ifndef GAME_H
 #define GAME_H
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
+using namespace std;
 
 class Game
 {
