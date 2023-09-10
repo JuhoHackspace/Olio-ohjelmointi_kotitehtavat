@@ -1,7 +1,4 @@
 #include "chef.h"
-#include <iostream>
-
-using namespace std;
 
 Chef::Chef(string name): name(name)
 {

@@ -1,7 +1,7 @@
 #ifndef ITALIANCHEF_H
 #define ITALIANCHEF_H
-
 #include "chef.h"
+#include <string>
 #include <iostream>
 
 using namespace std;
