@@ -1,4 +1,7 @@
 #include "kerrostalo.h"
+#include <iostream>
+
+using namespace std;
 
 Kerrostalo::Kerrostalo() //Määritin tässä konstruktorissa nämä katutason ja kerroksen asunnot, kun UML kaaviossa ei ollut erillistä funktiota sille
 {

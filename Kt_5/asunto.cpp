@@ -1,7 +1,4 @@
 #include "asunto.h"
-#include <iostream>
-
-using namespace std;
 
 Asunto::Asunto()
 {

@@ -14,7 +14,7 @@ public:
     Asunto as3;
     Asunto as4;
     virtual void maaritaAsunnot();
-    double laskeKulutus(double);
+    virtual double laskeKulutus(double);
 };
 
 #endif // KERROS_H

@@ -13,7 +13,7 @@ public:
     Asunto as1;
     Asunto as2;
     virtual void maaritaAsunnot() override;
-    double laskeKulutus(double);
+    virtual double laskeKulutus(double) override;
 };
 
 #endif // KATUTASO_H

@@ -1,4 +1,7 @@
 #include "katutaso.h"
+#include <iostream>
+
+using namespace std;
 
 Katutaso::Katutaso()
 {

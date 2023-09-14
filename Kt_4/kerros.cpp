@@ -1,4 +1,7 @@
 #include "kerros.h"
+#include <iostream>
+
+using namespace std;
 
 Kerros::Kerros()
 {
