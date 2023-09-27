@@ -2,6 +2,8 @@
 #define DEVICEDISPLAY_H
 #include "devicebaseclass.h"
 #include <iostream>
+#include <sstream>
+#include <limits>
 
 class DeviceDisplay: public DeviceBaseClass
 {

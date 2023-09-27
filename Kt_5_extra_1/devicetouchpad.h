@@ -2,6 +2,8 @@
 #define DEVICETOUCHPAD_H
 #include "devicebaseclass.h"
 #include <iostream>
+#include <sstream>
+#include <limits>
 
 using namespace std;
 

@@ -6,16 +6,24 @@ DeviceTouchPad::DeviceTouchPad()
 }
 void DeviceTouchPad::setTouchPadSensitivity()
 {
-    short sens;
-    cin >> sens;
-    if(sens < 1) {
-        this->touchPadSensitivity = 1;
-    }
-    else if(sens > 5) {
-        this->touchPadSensitivity = 5;
-    }
-    else {
-        this->touchPadSensitivity = sens;
+    while(true) {
+        cout << "Set touchpad sensitivity (1-5) (1 = high, 5 = low): ";
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        string user_input;
+        cin >> user_input;
+        stringstream ss(user_input);
+        if(ss>>this->touchPadSensitivity) {
+            if(this->touchPadSensitivity < 1) {
+                this->touchPadSensitivity = 1;
+            }
+            else if(this->touchPadSensitivity > 5) {
+                this->touchPadSensitivity = 5;
+            }
+            break;
+        }
+        else {
+            cout << "Incorrect input, use only integers" << endl;
+        }
     }
 }
 short DeviceTouchPad::getTouchPadSensitivity()

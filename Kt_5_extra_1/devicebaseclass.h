@@ -1,6 +1,8 @@
 #ifndef DEVICEBASECLASS_H
 #define DEVICEBASECLASS_H
 #include <iostream>
+#include <sstream>
+#include <limits>
 
 using namespace std;
 

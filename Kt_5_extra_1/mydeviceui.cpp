@@ -54,9 +54,7 @@ void MyDeviceUI::uiSetMouseInformation()
     cout << endl;
     cout << "SET MOUSE INFORMATION" << endl;
     cout << "=====================" << endl;
-    cout << "Set mouse device ID: ";
     this->objectDeviceMouse->setDeviceID();
-    cout << "Set mouse primary button: ";
     this->objectDeviceMouse->setPrimaryButton();
     cout << endl;
 }
@@ -66,9 +64,7 @@ void MyDeviceUI::uiSetDisplayInformation()
     cout << endl;
     cout << "SET DISPLAY INFORMATION" << endl;
     cout << "=======================" << endl;
-    cout << "1: Set display device ID: ";
     this->objectDeviceDisplay->setDeviceID();
-    cout << "2: Set display resolution: ";
     this->objectDeviceDisplay->setDisplayResolution();
     cout << endl;
 }
@@ -78,9 +74,7 @@ void MyDeviceUI::uiSetTouchPadInformation()
     cout << endl;
     cout << "SET TOUCH PAD INFORMATION" << endl;
     cout << "=========================" << endl;
-    cout << "1: Set touch pad device ID: ";
     this->objectDeviceTouchpad->setDeviceID();
-    cout << "2: Set touch pad sensitivity: ";
     this->objectDeviceTouchpad->setTouchPadSensitivity();
     cout << endl;
 

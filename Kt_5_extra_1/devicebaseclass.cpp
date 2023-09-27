@@ -6,7 +6,20 @@ DeviceBaseClass::DeviceBaseClass()
 }
 void DeviceBaseClass::setDeviceID()
 {
-    cin >> this->deviceID;
+    while(true) {
+        cout << "Set device ID: ";
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        string user_input;
+        cin >> user_input;
+        stringstream ss(user_input);
+        if(ss>>this->deviceID) {
+            break;
+        }
+        else {
+            cout << "Incorrect input, use only integers" << endl;
+        }
+    }
+
 }
 short DeviceBaseClass::getDeviceID()
 {
