@@ -18,7 +18,18 @@ void MyDeviceUI::execute()
 {
     while(true) {
         this->uiShowMenu();
-        cin >> this->userSelection;
+        while(true) {
+            cout << "Choose: ";
+            string user_input;
+            cin >> user_input;
+            stringstream ss(user_input);
+            if(ss>>this->userSelection) {
+                break;
+            }
+            else {
+                cout << "Incorrect input, use only integers" << endl;
+            }
+        }
 
         switch(this->userSelection) {
         case 1: this->uiSetMouseInformation();
@@ -46,9 +57,7 @@ void MyDeviceUI::uiShowMenu()
     cout << "3: Set Display Information" << endl;
     cout << "4: Show devices information" << endl;
     cout << "5: Finish" << endl << endl;
-    cout << "Choose: ";
 }
-
 void MyDeviceUI::uiSetMouseInformation()
 {
     cout << endl;

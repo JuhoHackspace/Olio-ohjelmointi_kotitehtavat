@@ -9,7 +9,6 @@ void DeviceDisplay::setDisplayResolution()
 {
     while(true) {
         cout << "Set display resolution (1-10): ";
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         string user_input;
         cin >> user_input;
         stringstream ss(user_input);

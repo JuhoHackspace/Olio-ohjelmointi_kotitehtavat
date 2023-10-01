@@ -8,7 +8,6 @@ void DeviceMouse::setPrimaryButton()
 {
     while(true) {
         cout << "Set mouse primary button (1 = left, 2 = right): ";
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         string user_input;
         cin >> user_input;
         stringstream ss(user_input);

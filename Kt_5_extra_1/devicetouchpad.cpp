@@ -8,7 +8,6 @@ void DeviceTouchPad::setTouchPadSensitivity()
 {
     while(true) {
         cout << "Set touchpad sensitivity (1-5) (1 = high, 5 = low): ";
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         string user_input;
         cin >> user_input;
         stringstream ss(user_input);

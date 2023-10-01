@@ -4,6 +4,8 @@
 #include "devicemouse.h"
 #include "devicetouchpad.h"
 #include <iostream>
+#include <sstream>
+#include <limits>
 
 using namespace std;
 
