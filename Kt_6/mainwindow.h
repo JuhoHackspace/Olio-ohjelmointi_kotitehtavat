@@ -20,6 +20,9 @@ public slots:
     void clearHandler();
     void enterHandler();
     void addSubMulDivClickHandler();
+    void dotHandler();
+    void prefixHandler();
+    void eraseHandler();
 
 private:
     Ui::MainWindow *ui;
@@ -27,6 +30,7 @@ private:
     int state;
     float result;
     short operand;
+    bool result_displayed;
     void resetLineEdits();
 };
 #endif // MAINWINDOW_H
