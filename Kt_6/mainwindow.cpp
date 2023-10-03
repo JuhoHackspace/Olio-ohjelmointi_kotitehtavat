@@ -155,7 +155,7 @@ void MainWindow::prefixHandler()
 
 void MainWindow::eraseHandler()
 {
-    if(state == 1 && !number1.isEmpty() > 0) {
+    if(state == 1 && !number1.isEmpty()) {
         number1.chop(1);
         ui->num1->setText(number1);
     }
