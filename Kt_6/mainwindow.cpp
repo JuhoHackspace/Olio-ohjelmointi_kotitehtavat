@@ -30,6 +30,16 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->prefix,SIGNAL(clicked()),this,SLOT(prefixHandler()));
     connect(ui->erase,SIGNAL(clicked()),this,SLOT(eraseHandler()));
 
+    MainWindow::setFixedSize(311,325);
+
+    QPalette palette;
+    palette.setColor(QPalette::Window, QColor(31, 69, 85));
+    MainWindow::setPalette(palette);
+
+    ui->label->setStyleSheet("color: white;");
+    ui->label_2->setStyleSheet("color: white;");
+    ui->label_3->setStyleSheet("color: white;");
+
 }
 
 MainWindow::~MainWindow()
