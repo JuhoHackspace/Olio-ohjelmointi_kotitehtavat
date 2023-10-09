@@ -25,11 +25,11 @@ public slots:
 private:
     Ui::MainWindow *ui;
     char currentPlayer;
-    std::vector<std::vector<QPushButton*>> game_board;
-    int count;
-    void initializeBoard();
-    bool winCheck();
-    void enableDisable(bool);
-    void resetBoard();
+    std::vector<std::vector<QPushButton*>> game_board; //Pelialusta 2-D vektorina
+    int count; //Kokonaispainallusten määrä tasapelitilannetta varten.
+    void initializeBoard(); //Pelipainonapit laitetaan kaksiulotteiseen vektoriin game_board
+    bool winCheck(); //Tarkistetaan voittiko edellisen painalluksen tehnyt pelaaja
+    void enableDisable(bool); //Enabloidaan tai disabloidaan kaikki pelipainonapit
+    void resetBoard(); //Pyyhitään teksti kaikista pelipainonapeista
 };
 #endif // MAINWINDOW_H

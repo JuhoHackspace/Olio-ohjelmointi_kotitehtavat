@@ -6,11 +6,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    initializeBoard();
-    enableDisable(true);
-    MainWindow::setFixedSize(503,329);
+    initializeBoard(); //Alustetaan pelialusta
+    enableDisable(true); //Disabloidaan kaikki pelinapit aluksi
+    MainWindow::setFixedSize(503,329); //Asetetaan ikkunaan vakiokoko
     ui->Player_turn->setText(QString("Aloita peli"));
-    for(int row = 0; row < 3; row++) {
+    for(int row = 0; row < 3; row++) { //Tässä jo käytetään hyödyksi game_boardia
         for(int col = 0; col < 3; col++) {
             QPushButton * button = game_board[row][col];
             connect(button,SIGNAL(clicked()),this,SLOT(onButtonClick()));
@@ -34,9 +34,9 @@ void MainWindow::onButtonClick()
     }
     if(winCheck()) {
         ui->Player_turn->setText(QString("Pelaaja "+QString(this->currentPlayer)+" voitti"));
-        enableDisable(true);
+        enableDisable(true); //Disabloidaan voiton jälkeen kaikki napit
     }
-    else if(count == 9) {
+    else if(count == 9) { //Jos painalluksia 9 ja ei voittoa, niin tasapeli
         ui->Player_turn->setText(QString("Tasapeli"));
         enableDisable(true);
     }
@@ -54,21 +54,21 @@ void MainWindow::onButtonClick()
 
 void MainWindow::gameStart()
 {
-    enableDisable(false);
-    resetBoard();
+    enableDisable(false); //Enabloidaan pelin aluksi pelinapit
+    resetBoard(); //Pyyhitään edellinen peli napeista
     count = 0;
     currentPlayer = 'X';
-    ui->Start->setText(QString("Restart"));
+    ui->Start->setText(QString("Restart")); //Asetetaan tekstiksi Restart ensimmäisen painalluksen jälkeen
     ui->Player_turn->setText(QString("Pelaajan "+QString(this->currentPlayer)+" vuoro"));
 }
 
 void MainWindow::initializeBoard()
 {
-    game_board.resize(3, std::vector<QPushButton*>(3,nullptr));
+    game_board.resize(3, std::vector<QPushButton*>(3,nullptr)); //Laitetaan 2D-vektorille koko, jotta napit voidaan asettaa sinne
     for(int row = 0; row < 3; row++) {
         for(int col = 0; col < 3; col++) {
-            QString btn_name = QString('N') + QString::number(row) + QString::number(col);
-            QPushButton * button = this->findChild<QPushButton*>(btn_name);
+            QString btn_name = QString('N') + QString::number(row) + QString::number(col); //Pelinapit on nimetty niin että rivi ja sarake indeksin avulla voidaan löytää ne
+            QPushButton * button = this->findChild<QPushButton*>(btn_name); //Etsitään oikea nappula
             if(button) {
                 game_board[row][col] = button;
             }
@@ -76,7 +76,7 @@ void MainWindow::initializeBoard()
     }
 }
 
-bool MainWindow::winCheck()
+bool MainWindow::winCheck() // Täällä hyödynnetään myös tätä game_boardia. Muuten tarkistaminen olisi vaivalloista
 {
     for(int row = 0; row < 3; row++) {
         for(int col = 0; col < 3; col++) {
@@ -105,7 +105,7 @@ bool MainWindow::winCheck()
     return false;
 }
 
-void MainWindow::enableDisable(bool init_start)
+void MainWindow::enableDisable(bool init_start) //Annetaan parametriksi true-false, eli halutaanko enabloida vai disabloida
 {
     for(int row = 0; row < 3; row++) {
         for(int col = 0; col < 3; col++) {
