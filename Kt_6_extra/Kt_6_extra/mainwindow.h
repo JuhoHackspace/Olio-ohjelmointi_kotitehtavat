@@ -26,7 +26,6 @@ private:
     Ui::MainWindow *ui;
     char currentPlayer;
     std::vector<std::vector<QPushButton*>> game_board;
-    bool game_in_progress;
     int count;
     void initializeBoard();
     bool winCheck();

@@ -8,16 +8,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     initializeBoard();
     enableDisable(true);
-    game_in_progress = false;
     MainWindow::setFixedSize(503,329);
     ui->Player_turn->setText(QString("Aloita peli"));
     for(int row = 0; row < 3; row++) {
         for(int col = 0; col < 3; col++) {
-            QString btn_name = QString('N') + QString::number(row) + QString::number(col);
-            QPushButton * button = this->findChild<QPushButton*>(btn_name);
-            if(button) {
-                connect(button,SIGNAL(clicked()),this,SLOT(onButtonClick()));
-            }
+            QPushButton * button = game_board[row][col];
+            connect(button,SIGNAL(clicked()),this,SLOT(onButtonClick()));
         }
     }
     connect(ui->Start,SIGNAL(clicked()),this,SLOT(gameStart()));
@@ -60,7 +56,6 @@ void MainWindow::gameStart()
 {
     enableDisable(false);
     resetBoard();
-    game_in_progress = true;
     count = 0;
     currentPlayer = 'X';
     ui->Start->setText(QString("Restart"));
