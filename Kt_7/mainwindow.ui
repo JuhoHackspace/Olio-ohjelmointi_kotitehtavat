@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>581</width>
-    <height>415</height>
+    <width>582</width>
+    <height>455</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,7 +21,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>10</y>
+      <y>40</y>
       <width>121</width>
       <height>23</height>
      </rect>
@@ -34,7 +34,7 @@
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>10</y>
+      <y>40</y>
       <width>121</width>
       <height>23</height>
      </rect>
@@ -47,7 +47,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>40</y>
+      <y>70</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -64,7 +64,7 @@ font: 16pt &quot;Bahnschrift Condensed&quot;;</string>
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>40</y>
+      <y>70</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -81,7 +81,7 @@ font: 16pt &quot;Bahnschrift Condensed&quot;;</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>270</y>
+      <y>300</y>
       <width>161</width>
       <height>71</height>
      </rect>
@@ -97,8 +97,8 @@ font: 16pt &quot;Bahnschrift Condensed&quot;;</string>
    <widget class="QPushButton" name="stop">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>270</y>
+      <x>400</x>
+      <y>300</y>
       <width>161</width>
       <height>71</height>
      </rect>
@@ -118,7 +118,7 @@ font: 16pt &quot;Bahnschrift Condensed&quot;;</string>
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>140</y>
+      <y>170</y>
       <width>451</width>
       <height>61</height>
      </rect>
@@ -137,8 +137,8 @@ font: 20pt &quot;Berlin Sans FB Demi&quot;;</string>
    <widget class="QPushButton" name="min_2">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>210</y>
+      <x>170</x>
+      <y>240</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -155,7 +155,7 @@ font: 16pt &quot;Bahnschrift Condensed&quot;;</string>
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>210</y>
+      <y>240</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -175,7 +175,7 @@ font: 16pt &quot;Bahnschrift Condensed&quot;;</string>
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>80</y>
+      <y>110</y>
       <width>451</width>
       <height>61</height>
      </rect>
@@ -197,7 +197,7 @@ font: 20pt &quot;Berlin Sans FB Demi&quot;;</string>
       <x>0</x>
       <y>0</y>
       <width>581</width>
-      <height>401</height>
+      <height>431</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -211,7 +211,7 @@ font: 20pt &quot;Berlin Sans FB Demi&quot;;</string>
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>270</y>
+      <y>300</y>
       <width>171</width>
       <height>71</height>
      </rect>
@@ -222,6 +222,38 @@ color: rgb(103, 70, 4)</string>
     </property>
     <property name="text">
      <string>Chess Clock</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 900 16pt &quot;Arial Black&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Player 1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>10</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 900 16pt &quot;Arial Black&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Player 2</string>
     </property>
    </widget>
    <zorder>background</zorder>
@@ -236,13 +268,15 @@ color: rgb(103, 70, 4)</string>
    <zorder>min_5</zorder>
    <zorder>winner</zorder>
    <zorder>chessclock</zorder>
+   <zorder>label</zorder>
+   <zorder>label_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>581</width>
+     <width>582</width>
      <height>21</height>
     </rect>
    </property>
