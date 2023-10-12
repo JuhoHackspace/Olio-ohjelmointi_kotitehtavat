@@ -78,18 +78,16 @@ void MainWindow::initializeBoard()
 
 bool MainWindow::winCheck() // Täällä hyödynnetään myös tätä game_boardia. Muuten tarkistaminen olisi vaivalloista
 {
-    for(int row = 0; row < 3; row++) {
-        for(int col = 0; col < 3; col++) {
-            if(game_board[row][0]->text() == this->currentPlayer &&
-               game_board[row][1]->text() == this->currentPlayer &&
-               game_board[row][2]->text() == this->currentPlayer) {
-                return true;
-            }
-            if(game_board[0][col]->text() == this->currentPlayer &&
-               game_board[1][col]->text() == this->currentPlayer &&
-               game_board[2][col]->text() == this->currentPlayer) {
-                return true;
-            }
+    for(int i = 0; i < 3; i++) {
+        if(game_board[i][0]->text() == this->currentPlayer &&
+            game_board[i][1]->text() == this->currentPlayer &&
+            game_board[i][2]->text() == this->currentPlayer) {
+            return true;
+        }
+        if(game_board[0][i]->text() == this->currentPlayer &&
+           game_board[1][i]->text() == this->currentPlayer &&
+           game_board[2][i]->text() == this->currentPlayer) {
+           return true;
         }
     }
 
